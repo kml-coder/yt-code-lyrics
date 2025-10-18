@@ -201,49 +201,86 @@ def clean_lyrics_text(lyrics_text: str):
     return cleaned
 
 
-def align_lyrics_lines(lyrics_lines, whisper_words, min_ratio=0.6):
+def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_start_score=0.4):
     """
-    lyrics_lines: 정규화된(텍스트) 라인 배열
-    whisper_words: [{"word","start","end"}...]  (normalize_word 적용됨)
+    개선된 동적 누적 매칭 기반 가사-Whisper 정렬 (디버깅 포함)
     """
     results = []
+    ww = [w["word"] for w in whisper_words]
+    n = len(ww)
     used_idx = 0
 
-    # 빠른 접근용 원시 단어 시퀀스
-    ww = [w["word"] for w in whisper_words]
+    print("\n🧩 [ALIGN DEBUG START - Dynamic Progressive Matching] ---------------------------")
 
-    for line in lyrics_lines:
-        # 결과 JSON에는 line 원문 그대로 사용 (규칙)
-        lyric_tokens = [normalize_word(x) for x in line.split() if normalize_word(x)]
-        if not lyric_tokens:
+    for line_idx, line in enumerate(lyrics_lines):
+        lyric_str = " ".join([normalize_word(x) for x in line.split() if normalize_word(x)])
+        if not lyric_str:
+            print(f"⚪️ [Line {line_idx}] Empty line, skipped.")
             results.append({"text": line, "start": None, "end": None})
             continue
 
-        # 탐색 윈도우: 라인 길이 + 여유 3단어
-        best = None
         best_score = 0.0
-        window_extra = 3
-        max_i = max(0, len(whisper_words) - max(1, len(lyric_tokens)) + 1)
+        last_high_idx = None
+        start_time = None
+        line_done = False
 
-        for i in range(used_idx, max_i):
-            j = min(len(whisper_words), i + len(lyric_tokens) + window_extra)
-            seg_words = ww[i:j]
-            # 순서 민감 유사도
-            ratio = difflib.SequenceMatcher(None, " ".join(seg_words), " ".join(lyric_tokens)).ratio()
+        print(f"\n🎵 [Line {line_idx}] '{line}'")
+        for i in range(used_idx, n):
+            # 현재까지 누적 단어 구간
+            segment = " ".join(ww[used_idx:i+1])
+            ratio = difflib.SequenceMatcher(None, segment, lyric_str).ratio()
+
+            # 디버깅용 로그
+            print(f"   [{i:03d}] ratio={ratio:.3f} | segment='{segment[-60:]}'", end="\r")
+
+            # 첫 시작 시점: 최소 일정 유사도 이상이면 start_time 설정
+            if start_time is None and ratio >= min_start_score:
+                start_time = whisper_words[used_idx]["start"]
+
+            # 최고점 갱신
             if ratio > best_score:
                 best_score = ratio
-                best = (i, j - 1)  # 인덱스 범위
+                last_high_idx = i
 
-        if best and best_score >= min_ratio:
-            i, j = best
-            start = whisper_words[i]["start"]
-            end = whisper_words[j]["end"]
-            results.append({"text": line, "start": round(start, 3), "end": round(end, 3)})
-            used_idx = j + 1  # 앞으로 진행 (중복 매칭 방지)
-        else:
-            results.append({"text": line, "start": None, "end": None})
+            # 급격한 하락 감지 → 종료
+            elif best_score - ratio > drop_threshold and last_high_idx is not None:
+                end_time = whisper_words[last_high_idx]["end"]
+                start_val = start_time if start_time is not None else whisper_words[used_idx]["start"]
+                results.append({
+                    "text": line,
+                    "start": round(start_val, 3),
+                    "end": round(end_time, 3),
+                    "score": round(best_score, 3)
+                })
+                print(f"\n✅ [Line {line_idx}] Done | best_score={best_score:.3f} | "
+                    f"range={used_idx}-{last_high_idx} | start={start_val:.3f}, end={end_time:.3f}")
+                print(f"   ↳ Matched segment: {' '.join(ww[used_idx:last_high_idx+1])}")
+                used_idx = last_high_idx + 1
+                line_done = True
+                break
 
-    # 보간 처리
+
+        # 루프가 끝났는데도 종료 안 됐으면 강제 종료
+        if not line_done:
+            if last_high_idx is not None:
+                start_t = start_time or whisper_words[used_idx]["start"]
+                end_t = whisper_words[last_high_idx]["end"]
+                results.append({
+                    "text": line,
+                    "start": round(start_t, 3),
+                    "end": round(end_t, 3),
+                    "score": round(best_score, 3)
+                })
+                print(f"\n⚙️ [Line {line_idx}] Auto-finish | best_score={best_score:.3f} | "
+                      f"range={used_idx}-{last_high_idx} | start={start_t:.3f}, end={end_t:.3f}")
+                used_idx = last_high_idx + 1
+            else:
+                print(f"⚠️ [Line {line_idx}] No valid match (max ratio={best_score:.3f})")
+                results.append({"text": line, "start": None, "end": None})
+
+    print("\n🧾 [ALIGN DEBUG END] ---------------------------\n")
+
+    # ✅ 후처리: 비어있는 라인 보간
     known = [(k, r["start"], r["end"]) for k, r in enumerate(results) if r["start"] is not None]
     for idx, r in enumerate(results):
         if r["start"] is None and known:
@@ -254,15 +291,12 @@ def align_lyrics_lines(lyrics_lines, whisper_words, min_ratio=0.6):
                 next_start = nexts[0][1]
                 mid = round(statistics.mean([prev_end, next_start]), 3)
                 r["start"], r["end"] = mid, round(mid + 2.5, 3)
+                print(f"🔧 Interpolated [Line {idx}] '{r['text']}' → {r['start']}~{r['end']}")
             elif prevs:
                 prev_end = prevs[-1][2]
                 r["start"], r["end"] = round(prev_end + 1.0, 3), round(prev_end + 3.5, 3)
-            elif nexts:
-                next_start = nexts[0][1]
-                r["start"], r["end"] = round(next_start - 3.5, 3), round(next_start - 1.0, 3)
+                print(f"🔧 Interpolated [Line {idx}] (after prev) '{r['text']}' → {r['start']}~{r['end']}")
 
-    # 시간으로 정렬 (UI 편의)
-    results.sort(key=lambda x: (float("inf") if x["start"] is None else x["start"]))
     return results
 
 
@@ -376,7 +410,7 @@ def lyrics_timed():
         print(f"🧾 Total lines after cleaning: {len(lyrics_lines)}\n")
 
         # 4) 정렬
-        aligned = align_lyrics_lines(lyrics_lines, whisper_words, min_ratio=0.6)
+        aligned = align_lyrics_lines(lyrics_lines, whisper_words)
 
         # 5) 결과
         return jsonify({

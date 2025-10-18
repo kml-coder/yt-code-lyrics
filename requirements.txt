@@ -1,0 +1,47 @@
+# ----------------------------------------
+# 🌐 Flask Backend
+# ----------------------------------------
+Flask
+Flask-Cors
+
+# ----------------------------------------
+# 🎬 YouTube Audio Download
+# ----------------------------------------
+yt_dlp
+
+# ----------------------------------------
+# 🧠 WhisperX (Transcription + Alignment)
+# ----------------------------------------
+whisperx
+
+# ----------------------------------------
+# 🎵 Lyrics Fetching
+# ----------------------------------------
+lyricsgenius
+beautifulsoup4
+
+# ----------------------------------------
+# 🎶 Auto-Synced Lyrics & Karaoke Generator
+# ----------------------------------------
+lyrics-transcriber
+
+# ----------------------------------------
+# 🔊 Audio / Signal Processing
+# ----------------------------------------
+ffmpeg-python
+librosa
+numpy
+scipy
+
+# ----------------------------------------
+# 🔥 PyTorch Core (Required by WhisperX)
+# ----------------------------------------
+torch
+torchaudio
+torchvision
+
+# ✅ (Optional) — For CPU-only environments:
+# torch==2.3.1+cpu
+# torchaudio==2.3.1+cpu
+# torchvision==0.18.1+cpu
+# -f https://download.pytorch.org/whl/torch_stable.html

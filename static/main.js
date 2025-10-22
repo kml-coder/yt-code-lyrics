@@ -91,8 +91,10 @@ async function fetchLyricsAndAudio(videoUrl) {
 // 💻 터미널 UI 관련 함수
 // ---------------------------------------------
 function clearTerminal() {
-  $code.textContent = "";
+  if (syncTimer) clearInterval(syncTimer);
+  typing = false;
   displayedIndex = -1;
+  $code.textContent = "";
 }
 
 function appendLine(text) {
@@ -114,7 +116,7 @@ async function typeText(text, delay = 25) {
 }
 
 // ---------------------------------------------
-// 🕒 오디오 싱크 타이핑
+// 🕒 오디오 싱크 타이핑 (속도 자동 조절)
 // ---------------------------------------------
 function scheduleSync() {
   if (syncTimer) clearInterval(syncTimer);
@@ -126,7 +128,11 @@ function scheduleSync() {
 
     const seg = segments[nextIndex];
     if (t >= seg.start) {
-      await typeText(`[${seg.start.toFixed(2)}s] ${seg.text}`);
+      // ✅ 가사 길이에 따라 타이핑 속도 조절
+      const baseDelay = 25;
+      const dynamicDelay = Math.min(50, baseDelay + seg.text.length * 0.5);
+      // await typeText(`${seg.text}`, dynamicDelay); 
+      await typeText(`[${seg.start.toFixed(2)}s] ${seg.text}`, dynamicDelay);
       displayedIndex++;
     }
   }, 100);
@@ -137,29 +143,55 @@ function scheduleSync() {
 // ---------------------------------------------
 $btnGen.addEventListener("click", async () => {
   try {
+    // 🔒 중복 클릭 방지
+    if ($btnGen.disabled) return;
+    $btnGen.disabled = true;
+
     setStatus("⏳ Fetching lyrics & audio...");
     clearTerminal();
+
+    // 🔁 이전 상태 초기화
+    displayedIndex = -1;
+    typing = false;
+    if (syncTimer) clearInterval(syncTimer);
+    if ($audio) {
+      $audio.pause();
+      $audio.currentTime = 0;
+    }
+
     $btnPlay.disabled = true;
     $btnPause.disabled = true;
     $btnDownload.disabled = true;
 
     const input = $input.value.trim();
-    if (!input) return setStatus("Please paste a YouTube link.");
+    if (!input) {
+      setStatus("Please paste a YouTube link.");
+      $btnGen.disabled = false;
+      return;
+    }
 
     const { audioData, lyricsData } = await fetchLyricsAndAudio(input);
 
     segments = lyricsData.lyrics_timed;
-    if (!segments.length) return setStatus("No lyrics found or transcription failed.");
+    if (!segments.length) {
+      setStatus("No lyrics found or transcription failed.");
+      $btnGen.disabled = false;
+      return;
+    }
 
     appendLine(`## Loaded: ${lyricsData.youtube_title}\n`);
     $audio.src = audioData.audio_url;
     $btnPlay.disabled = false;
     $btnPause.disabled = false;
     $btnDownload.disabled = false;
+
     setStatus("✅ Ready to play!");
   } catch (e) {
     console.error(e);
     setStatus("❌ Error: " + e.message);
+  } finally {
+    // ✅ 항상 버튼 다시 활성화
+    $btnGen.disabled = false;
   }
 });
 
@@ -168,6 +200,7 @@ $btnGen.addEventListener("click", async () => {
 // ---------------------------------------------
 $btnPlay.addEventListener("click", () => {
   if (!$audio.src) return setStatus("No audio loaded.");
+  $audio.currentTime = 0; // ✅ 재시작 시 항상 0초로
   $audio.play();
   scheduleSync();
   setStatus("▶ Playing...");

@@ -79,6 +79,18 @@ def transcribe_with_whisperx(audio_path: str):
         )
 
     aligned = whisperx.align(result["segments"], align_model, align_meta, audio, device)
+
+    # ✅ 결과 JSON 저장
+    base_name = os.path.splitext(os.path.basename(audio_path))[0]
+    json_path = os.path.join(DOWNLOAD_DIR, f"{base_name}_whisperx.json")
+
+    try:
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(aligned, f, indent=2, ensure_ascii=False)
+        print(f"💾 WhisperX alignment saved → {json_path}")
+    except Exception as e:
+        print(f"⚠️ Failed to save WhisperX JSON: {e}")
+
     return aligned["segments"]  # 각 segment에 words 필드 포함
 
 
@@ -299,7 +311,6 @@ def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_sta
 
     return results
 
-
 # ----------------------------------------
 # 🌐 Flask 엔드포인트
 # ----------------------------------------
@@ -344,7 +355,7 @@ def lyrics_timed():
         audio_path, yt_title, yt_uploader = download_audio(video_url)
         print(f"✅ Downloaded: {yt_title} ({audio_path})")
 
-        whisper_segments = transcribe_with_whisperx(audio_path)
+        whisper_segments = transcribe_with_whisperx("separated/htdemucs/VoEsEC2CLgE/vocals.wav")
         whisper_words = flatten_whisper_words(whisper_segments)
         if not whisper_words:
             print("⚠️ No word-level timestamps from WhisperX")
@@ -409,15 +420,14 @@ def lyrics_timed():
             print(f"{i+1:02d}. {line}")
         print(f"🧾 Total lines after cleaning: {len(lyrics_lines)}\n")
 
-        # 4) 정렬
         aligned = align_lyrics_lines(lyrics_lines, whisper_words)
 
-        # 5) 결과
         return jsonify({
             "youtube_title": yt_title,
             "artist": artist or yt_uploader,
-            "lyrics_timed": aligned,  # [{line,start,end}...]
+            "lyrics_timed": aligned,  # ✅ 단어별 포함
         })
+
 
     except Exception as e:
         import traceback

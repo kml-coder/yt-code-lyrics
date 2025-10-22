@@ -1,0 +1,1003 @@
+{
+  "segments": [
+    {
+      "start": 9.245,
+      "end": 23.44,
+      "text": " Moon, a hole of light Through the big tall tent up high Here before and after me Shining",
+      "words": [
+        {
+          "word": "Moon,",
+          "start": 9.245,
+          "end": 11.049,
+          "score": 0.703
+        },
+        {
+          "word": "a",
+          "start": 11.07,
+          "end": 11.09,
+          "score": 0.0
+        },
+        {
+          "word": "hole",
+          "start": 11.11,
+          "end": 11.851,
+          "score": 0.588
+        },
+        {
+          "word": "of",
+          "start": 11.871,
+          "end": 11.912,
+          "score": 0.005
+        },
+        {
+          "word": "light",
+          "start": 11.932,
+          "end": 13.054,
+          "score": 0.331
+        },
+        {
+          "word": "Through",
+          "start": 13.074,
+          "end": 13.776,
+          "score": 0.26
+        },
+        {
+          "word": "the",
+          "start": 13.796,
+          "end": 13.856,
+          "score": 0.283
+        },
+        {
+          "word": "big",
+          "start": 13.997,
+          "end": 14.398,
+          "score": 0.768
+        },
+        {
+          "word": "tall",
+          "start": 14.498,
+          "end": 14.859,
+          "score": 0.584
+        },
+        {
+          "word": "tent",
+          "start": 15.019,
+          "end": 15.561,
+          "score": 0.812
+        },
+        {
+          "word": "up",
+          "start": 16.022,
+          "end": 16.062,
+          "score": 0.0
+        },
+        {
+          "word": "high",
+          "start": 16.082,
+          "end": 16.804,
+          "score": 0.4
+        },
+        {
+          "word": "Here",
+          "start": 17.325,
+          "end": 17.826,
+          "score": 0.624
+        },
+        {
+          "word": "before",
+          "start": 17.866,
+          "end": 18.989,
+          "score": 0.578
+        },
+        {
+          "word": "and",
+          "start": 19.009,
+          "end": 19.711,
+          "score": 0.516
+        },
+        {
+          "word": "after",
+          "start": 19.731,
+          "end": 20.312,
+          "score": 0.742
+        },
+        {
+          "word": "me",
+          "start": 21.355,
+          "end": 21.395,
+          "score": 0.0
+        },
+        {
+          "word": "Shining",
+          "start": 21.415,
+          "end": 23.44,
+          "score": 0.334
+        }
+      ]
+    },
+    {
+      "start": 39.046,
+      "end": 40.029,
+      "text": " I wonder",
+      "words": [
+        {
+          "word": "I",
+          "start": 39.046,
+          "end": 39.883,
+          "score": 0.827
+        },
+        {
+          "word": "wonder",
+          "start": 39.903,
+          "end": 40.029,
+          "score": 0.145
+        }
+      ]
+    },
+    {
+      "start": 80.525,
+      "end": 102.878,
+      "text": " here on earth, showed me what my heart was worth.",
+      "words": [
+        {
+          "word": "here",
+          "start": 80.525,
+          "end": 84.791,
+          "score": 0.22
+        },
+        {
+          "word": "on",
+          "start": 84.811,
+          "end": 88.317,
+          "score": 0.531
+        },
+        {
+          "word": "earth,",
+          "start": 88.337,
+          "end": 102.177,
+          "score": 0.508
+        },
+        {
+          "word": "showed",
+          "start": 102.197,
+          "end": 102.317,
+          "score": 0.006
+        },
+        {
+          "word": "me",
+          "start": 102.338,
+          "end": 102.378,
+          "score": 0.058
+        },
+        {
+          "word": "what",
+          "start": 102.398,
+          "end": 102.478,
+          "score": 0.047
+        },
+        {
+          "word": "my",
+          "start": 102.498,
+          "end": 102.538,
+          "score": 0.0
+        },
+        {
+          "word": "heart",
+          "start": 102.558,
+          "end": 102.658,
+          "score": 0.007
+        },
+        {
+          "word": "was",
+          "start": 102.678,
+          "end": 102.738,
+          "score": 0.005
+        },
+        {
+          "word": "worth.",
+          "start": 102.758,
+          "end": 102.878,
+          "score": 0.015
+        }
+      ]
+    },
+    {
+      "start": 102.898,
+      "end": 104.28,
+      "text": "So when it comes to be my turn, could you shine it down here for her?",
+      "words": [
+        {
+          "word": "So",
+          "start": 102.898,
+          "end": 102.938,
+          "score": 0.055
+        },
+        {
+          "word": "when",
+          "start": 102.958,
+          "end": 103.039,
+          "score": 0.008
+        },
+        {
+          "word": "it",
+          "start": 103.059,
+          "end": 103.099,
+          "score": 0.01
+        },
+        {
+          "word": "comes",
+          "start": 103.119,
+          "end": 103.219,
+          "score": 0.002
+        },
+        {
+          "word": "to",
+          "start": 103.239,
+          "end": 103.279,
+          "score": 0.008
+        },
+        {
+          "word": "be",
+          "start": 103.299,
+          "end": 103.339,
+          "score": 0.008
+        },
+        {
+          "word": "my",
+          "start": 103.359,
+          "end": 103.399,
+          "score": 0.002
+        },
+        {
+          "word": "turn,",
+          "start": 103.419,
+          "end": 103.519,
+          "score": 0.015
+        },
+        {
+          "word": "could",
+          "start": 103.539,
+          "end": 103.639,
+          "score": 0.004
+        },
+        {
+          "word": "you",
+          "start": 103.659,
+          "end": 103.72,
+          "score": 0.007
+        },
+        {
+          "word": "shine",
+          "start": 103.74,
+          "end": 103.84,
+          "score": 0.021
+        },
+        {
+          "word": "it",
+          "start": 103.86,
+          "end": 103.9,
+          "score": 0.009
+        },
+        {
+          "word": "down",
+          "start": 103.92,
+          "end": 104.0,
+          "score": 0.002
+        },
+        {
+          "word": "here",
+          "start": 104.02,
+          "end": 104.1,
+          "score": 0.002
+        },
+        {
+          "word": "for",
+          "start": 104.12,
+          "end": 104.18,
+          "score": 0.019
+        },
+        {
+          "word": "her?",
+          "start": 104.2,
+          "end": 104.28,
+          "score": 0.007
+        }
+      ]
+    },
+    {
+      "start": 104.3,
+      "end": 104.941,
+      "text": "Cause my love is mine on my own.",
+      "words": [
+        {
+          "word": "Cause",
+          "start": 104.3,
+          "end": 104.401,
+          "score": 0.012
+        },
+        {
+          "word": "my",
+          "start": 104.421,
+          "end": 104.461,
+          "score": 0.033
+        },
+        {
+          "word": "love",
+          "start": 104.481,
+          "end": 104.561,
+          "score": 0.011
+        },
+        {
+          "word": "is",
+          "start": 104.581,
+          "end": 104.621,
+          "score": 0.0
+        },
+        {
+          "word": "mine",
+          "start": 104.641,
+          "end": 104.721,
+          "score": 0.009
+        },
+        {
+          "word": "on",
+          "start": 104.741,
+          "end": 104.781,
+          "score": 0.002
+        },
+        {
+          "word": "my",
+          "start": 104.801,
+          "end": 104.841,
+          "score": 0.0
+        },
+        {
+          "word": "own.",
+          "start": 104.861,
+          "end": 104.941,
+          "score": 0.044
+        }
+      ]
+    },
+    {
+      "start": 104.961,
+      "end": 106.043,
+      "text": "I love my, my, my, nothing in the world belongs to me.",
+      "words": [
+        {
+          "word": "I",
+          "start": 104.961,
+          "end": 104.981,
+          "score": 0.052
+        },
+        {
+          "word": "love",
+          "start": 105.001,
+          "end": 105.082,
+          "score": 0.01
+        },
+        {
+          "word": "my,",
+          "start": 105.102,
+          "end": 105.162,
+          "score": 0.008
+        },
+        {
+          "word": "my,",
+          "start": 105.182,
+          "end": 105.242,
+          "score": 0.077
+        },
+        {
+          "word": "my,",
+          "start": 105.262,
+          "end": 105.322,
+          "score": 0.001
+        },
+        {
+          "word": "nothing",
+          "start": 105.342,
+          "end": 105.482,
+          "score": 0.006
+        },
+        {
+          "word": "in",
+          "start": 105.502,
+          "end": 105.542,
+          "score": 0.004
+        },
+        {
+          "word": "the",
+          "start": 105.562,
+          "end": 105.622,
+          "score": 0.056
+        },
+        {
+          "word": "world",
+          "start": 105.642,
+          "end": 105.743,
+          "score": 0.003
+        },
+        {
+          "word": "belongs",
+          "start": 105.763,
+          "end": 105.903,
+          "score": 0.004
+        },
+        {
+          "word": "to",
+          "start": 105.923,
+          "end": 105.963,
+          "score": 0.001
+        },
+        {
+          "word": "me.",
+          "start": 105.983,
+          "end": 106.043,
+          "score": 0.325
+        }
+      ]
+    },
+    {
+      "start": 113.482,
+      "end": 138.358,
+      "text": " It's mine for free, but oh my love Mine, oh mine, oh mine",
+      "words": [
+        {
+          "word": "It's",
+          "start": 113.482,
+          "end": 137.296,
+          "score": 0.245
+        },
+        {
+          "word": "mine",
+          "start": 137.316,
+          "end": 137.396,
+          "score": 0.0
+        },
+        {
+          "word": "for",
+          "start": 137.416,
+          "end": 137.476,
+          "score": 0.0
+        },
+        {
+          "word": "free,",
+          "start": 137.496,
+          "end": 137.596,
+          "score": 0.0
+        },
+        {
+          "word": "but",
+          "start": 137.616,
+          "end": 137.677,
+          "score": 0.0
+        },
+        {
+          "word": "oh",
+          "start": 137.697,
+          "end": 137.737,
+          "score": 0.0
+        },
+        {
+          "word": "my",
+          "start": 137.757,
+          "end": 137.797,
+          "score": 0.0
+        },
+        {
+          "word": "love",
+          "start": 137.817,
+          "end": 137.897,
+          "score": 0.0
+        },
+        {
+          "word": "Mine,",
+          "start": 137.917,
+          "end": 138.017,
+          "score": 0.0
+        },
+        {
+          "word": "oh",
+          "start": 138.037,
+          "end": 138.077,
+          "score": 0.0
+        },
+        {
+          "word": "mine,",
+          "start": 138.097,
+          "end": 138.198,
+          "score": 0.0
+        },
+        {
+          "word": "oh",
+          "start": 138.218,
+          "end": 138.258,
+          "score": 0.0
+        },
+        {
+          "word": "mine",
+          "start": 138.278,
+          "end": 138.358,
+          "score": 0.25
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "Moon,",
+      "start": 9.245,
+      "end": 11.049,
+      "score": 0.703
+    },
+    {
+      "word": "a",
+      "start": 11.07,
+      "end": 11.09,
+      "score": 0.0
+    },
+    {
+      "word": "hole",
+      "start": 11.11,
+      "end": 11.851,
+      "score": 0.588
+    },
+    {
+      "word": "of",
+      "start": 11.871,
+      "end": 11.912,
+      "score": 0.005
+    },
+    {
+      "word": "light",
+      "start": 11.932,
+      "end": 13.054,
+      "score": 0.331
+    },
+    {
+      "word": "Through",
+      "start": 13.074,
+      "end": 13.776,
+      "score": 0.26
+    },
+    {
+      "word": "the",
+      "start": 13.796,
+      "end": 13.856,
+      "score": 0.283
+    },
+    {
+      "word": "big",
+      "start": 13.997,
+      "end": 14.398,
+      "score": 0.768
+    },
+    {
+      "word": "tall",
+      "start": 14.498,
+      "end": 14.859,
+      "score": 0.584
+    },
+    {
+      "word": "tent",
+      "start": 15.019,
+      "end": 15.561,
+      "score": 0.812
+    },
+    {
+      "word": "up",
+      "start": 16.022,
+      "end": 16.062,
+      "score": 0.0
+    },
+    {
+      "word": "high",
+      "start": 16.082,
+      "end": 16.804,
+      "score": 0.4
+    },
+    {
+      "word": "Here",
+      "start": 17.325,
+      "end": 17.826,
+      "score": 0.624
+    },
+    {
+      "word": "before",
+      "start": 17.866,
+      "end": 18.989,
+      "score": 0.578
+    },
+    {
+      "word": "and",
+      "start": 19.009,
+      "end": 19.711,
+      "score": 0.516
+    },
+    {
+      "word": "after",
+      "start": 19.731,
+      "end": 20.312,
+      "score": 0.742
+    },
+    {
+      "word": "me",
+      "start": 21.355,
+      "end": 21.395,
+      "score": 0.0
+    },
+    {
+      "word": "Shining",
+      "start": 21.415,
+      "end": 23.44,
+      "score": 0.334
+    },
+    {
+      "word": "I",
+      "start": 39.046,
+      "end": 39.883,
+      "score": 0.827
+    },
+    {
+      "word": "wonder",
+      "start": 39.903,
+      "end": 40.029,
+      "score": 0.145
+    },
+    {
+      "word": "here",
+      "start": 80.525,
+      "end": 84.791,
+      "score": 0.22
+    },
+    {
+      "word": "on",
+      "start": 84.811,
+      "end": 88.317,
+      "score": 0.531
+    },
+    {
+      "word": "earth,",
+      "start": 88.337,
+      "end": 102.177,
+      "score": 0.508
+    },
+    {
+      "word": "showed",
+      "start": 102.197,
+      "end": 102.317,
+      "score": 0.006
+    },
+    {
+      "word": "me",
+      "start": 102.338,
+      "end": 102.378,
+      "score": 0.058
+    },
+    {
+      "word": "what",
+      "start": 102.398,
+      "end": 102.478,
+      "score": 0.047
+    },
+    {
+      "word": "my",
+      "start": 102.498,
+      "end": 102.538,
+      "score": 0.0
+    },
+    {
+      "word": "heart",
+      "start": 102.558,
+      "end": 102.658,
+      "score": 0.007
+    },
+    {
+      "word": "was",
+      "start": 102.678,
+      "end": 102.738,
+      "score": 0.005
+    },
+    {
+      "word": "worth.",
+      "start": 102.758,
+      "end": 102.878,
+      "score": 0.015
+    },
+    {
+      "word": "So",
+      "start": 102.898,
+      "end": 102.938,
+      "score": 0.055
+    },
+    {
+      "word": "when",
+      "start": 102.958,
+      "end": 103.039,
+      "score": 0.008
+    },
+    {
+      "word": "it",
+      "start": 103.059,
+      "end": 103.099,
+      "score": 0.01
+    },
+    {
+      "word": "comes",
+      "start": 103.119,
+      "end": 103.219,
+      "score": 0.002
+    },
+    {
+      "word": "to",
+      "start": 103.239,
+      "end": 103.279,
+      "score": 0.008
+    },
+    {
+      "word": "be",
+      "start": 103.299,
+      "end": 103.339,
+      "score": 0.008
+    },
+    {
+      "word": "my",
+      "start": 103.359,
+      "end": 103.399,
+      "score": 0.002
+    },
+    {
+      "word": "turn,",
+      "start": 103.419,
+      "end": 103.519,
+      "score": 0.015
+    },
+    {
+      "word": "could",
+      "start": 103.539,
+      "end": 103.639,
+      "score": 0.004
+    },
+    {
+      "word": "you",
+      "start": 103.659,
+      "end": 103.72,
+      "score": 0.007
+    },
+    {
+      "word": "shine",
+      "start": 103.74,
+      "end": 103.84,
+      "score": 0.021
+    },
+    {
+      "word": "it",
+      "start": 103.86,
+      "end": 103.9,
+      "score": 0.009
+    },
+    {
+      "word": "down",
+      "start": 103.92,
+      "end": 104.0,
+      "score": 0.002
+    },
+    {
+      "word": "here",
+      "start": 104.02,
+      "end": 104.1,
+      "score": 0.002
+    },
+    {
+      "word": "for",
+      "start": 104.12,
+      "end": 104.18,
+      "score": 0.019
+    },
+    {
+      "word": "her?",
+      "start": 104.2,
+      "end": 104.28,
+      "score": 0.007
+    },
+    {
+      "word": "Cause",
+      "start": 104.3,
+      "end": 104.401,
+      "score": 0.012
+    },
+    {
+      "word": "my",
+      "start": 104.421,
+      "end": 104.461,
+      "score": 0.033
+    },
+    {
+      "word": "love",
+      "start": 104.481,
+      "end": 104.561,
+      "score": 0.011
+    },
+    {
+      "word": "is",
+      "start": 104.581,
+      "end": 104.621,
+      "score": 0.0
+    },
+    {
+      "word": "mine",
+      "start": 104.641,
+      "end": 104.721,
+      "score": 0.009
+    },
+    {
+      "word": "on",
+      "start": 104.741,
+      "end": 104.781,
+      "score": 0.002
+    },
+    {
+      "word": "my",
+      "start": 104.801,
+      "end": 104.841,
+      "score": 0.0
+    },
+    {
+      "word": "own.",
+      "start": 104.861,
+      "end": 104.941,
+      "score": 0.044
+    },
+    {
+      "word": "I",
+      "start": 104.961,
+      "end": 104.981,
+      "score": 0.052
+    },
+    {
+      "word": "love",
+      "start": 105.001,
+      "end": 105.082,
+      "score": 0.01
+    },
+    {
+      "word": "my,",
+      "start": 105.102,
+      "end": 105.162,
+      "score": 0.008
+    },
+    {
+      "word": "my,",
+      "start": 105.182,
+      "end": 105.242,
+      "score": 0.077
+    },
+    {
+      "word": "my,",
+      "start": 105.262,
+      "end": 105.322,
+      "score": 0.001
+    },
+    {
+      "word": "nothing",
+      "start": 105.342,
+      "end": 105.482,
+      "score": 0.006
+    },
+    {
+      "word": "in",
+      "start": 105.502,
+      "end": 105.542,
+      "score": 0.004
+    },
+    {
+      "word": "the",
+      "start": 105.562,
+      "end": 105.622,
+      "score": 0.056
+    },
+    {
+      "word": "world",
+      "start": 105.642,
+      "end": 105.743,
+      "score": 0.003
+    },
+    {
+      "word": "belongs",
+      "start": 105.763,
+      "end": 105.903,
+      "score": 0.004
+    },
+    {
+      "word": "to",
+      "start": 105.923,
+      "end": 105.963,
+      "score": 0.001
+    },
+    {
+      "word": "me.",
+      "start": 105.983,
+      "end": 106.043,
+      "score": 0.325
+    },
+    {
+      "word": "It's",
+      "start": 113.482,
+      "end": 137.296,
+      "score": 0.245
+    },
+    {
+      "word": "mine",
+      "start": 137.316,
+      "end": 137.396,
+      "score": 0.0
+    },
+    {
+      "word": "for",
+      "start": 137.416,
+      "end": 137.476,
+      "score": 0.0
+    },
+    {
+      "word": "free,",
+      "start": 137.496,
+      "end": 137.596,
+      "score": 0.0
+    },
+    {
+      "word": "but",
+      "start": 137.616,
+      "end": 137.677,
+      "score": 0.0
+    },
+    {
+      "word": "oh",
+      "start": 137.697,
+      "end": 137.737,
+      "score": 0.0
+    },
+    {
+      "word": "my",
+      "start": 137.757,
+      "end": 137.797,
+      "score": 0.0
+    },
+    {
+      "word": "love",
+      "start": 137.817,
+      "end": 137.897,
+      "score": 0.0
+    },
+    {
+      "word": "Mine,",
+      "start": 137.917,
+      "end": 138.017,
+      "score": 0.0
+    },
+    {
+      "word": "oh",
+      "start": 138.037,
+      "end": 138.077,
+      "score": 0.0
+    },
+    {
+      "word": "mine,",
+      "start": 138.097,
+      "end": 138.198,
+      "score": 0.0
+    },
+    {
+      "word": "oh",
+      "start": 138.218,
+      "end": 138.258,
+      "score": 0.0
+    },
+    {
+      "word": "mine",
+      "start": 138.278,
+      "end": 138.358,
+      "score": 0.25
+    }
+  ]
+}

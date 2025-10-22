@@ -1,0 +1,1942 @@
+{
+  "segments": [
+    {
+      "start": 20.686,
+      "end": 38.577,
+      "text": " I see the crystal raindrops fall And the beauty of it all Is when the sun comes shining through To make those rainbows in my mind When I think of you sometime And I want to spend some time with you",
+      "words": [
+        {
+          "word": "I",
+          "start": 20.686,
+          "end": 21.007,
+          "score": 0.712
+        },
+        {
+          "word": "see",
+          "start": 21.027,
+          "end": 21.327,
+          "score": 0.98
+        },
+        {
+          "word": "the",
+          "start": 21.367,
+          "end": 21.467,
+          "score": 0.928
+        },
+        {
+          "word": "crystal",
+          "start": 21.547,
+          "end": 22.108,
+          "score": 0.793
+        },
+        {
+          "word": "raindrops",
+          "start": 22.169,
+          "end": 22.77,
+          "score": 0.855
+        },
+        {
+          "word": "fall",
+          "start": 22.91,
+          "end": 23.351,
+          "score": 0.843
+        },
+        {
+          "word": "And",
+          "start": 23.631,
+          "end": 23.751,
+          "score": 0.848
+        },
+        {
+          "word": "the",
+          "start": 23.831,
+          "end": 23.932,
+          "score": 0.793
+        },
+        {
+          "word": "beauty",
+          "start": 23.992,
+          "end": 24.633,
+          "score": 0.732
+        },
+        {
+          "word": "of",
+          "start": 24.833,
+          "end": 25.114,
+          "score": 0.834
+        },
+        {
+          "word": "it",
+          "start": 25.194,
+          "end": 25.234,
+          "score": 0.968
+        },
+        {
+          "word": "all",
+          "start": 25.595,
+          "end": 25.815,
+          "score": 0.892
+        },
+        {
+          "word": "Is",
+          "start": 25.835,
+          "end": 25.875,
+          "score": 0.496
+        },
+        {
+          "word": "when",
+          "start": 26.055,
+          "end": 26.256,
+          "score": 0.814
+        },
+        {
+          "word": "the",
+          "start": 26.296,
+          "end": 26.416,
+          "score": 0.907
+        },
+        {
+          "word": "sun",
+          "start": 26.476,
+          "end": 26.897,
+          "score": 0.924
+        },
+        {
+          "word": "comes",
+          "start": 26.977,
+          "end": 27.197,
+          "score": 0.874
+        },
+        {
+          "word": "shining",
+          "start": 27.257,
+          "end": 27.798,
+          "score": 0.712
+        },
+        {
+          "word": "through",
+          "start": 27.899,
+          "end": 28.159,
+          "score": 0.44
+        },
+        {
+          "word": "To",
+          "start": 30.703,
+          "end": 30.804,
+          "score": 0.964
+        },
+        {
+          "word": "make",
+          "start": 30.864,
+          "end": 31.064,
+          "score": 0.808
+        },
+        {
+          "word": "those",
+          "start": 31.144,
+          "end": 31.425,
+          "score": 0.652
+        },
+        {
+          "word": "rainbows",
+          "start": 31.505,
+          "end": 32.226,
+          "score": 0.87
+        },
+        {
+          "word": "in",
+          "start": 32.386,
+          "end": 32.507,
+          "score": 0.942
+        },
+        {
+          "word": "my",
+          "start": 32.587,
+          "end": 32.827,
+          "score": 0.896
+        },
+        {
+          "word": "mind",
+          "start": 32.887,
+          "end": 33.428,
+          "score": 0.916
+        },
+        {
+          "word": "When",
+          "start": 33.548,
+          "end": 33.709,
+          "score": 0.834
+        },
+        {
+          "word": "I",
+          "start": 33.809,
+          "end": 33.929,
+          "score": 0.828
+        },
+        {
+          "word": "think",
+          "start": 33.989,
+          "end": 34.51,
+          "score": 0.702
+        },
+        {
+          "word": "of",
+          "start": 34.53,
+          "end": 34.75,
+          "score": 0.38
+        },
+        {
+          "word": "you",
+          "start": 34.77,
+          "end": 34.831,
+          "score": 0.33
+        },
+        {
+          "word": "sometime",
+          "start": 34.931,
+          "end": 35.832,
+          "score": 0.806
+        },
+        {
+          "word": "And",
+          "start": 35.912,
+          "end": 35.993,
+          "score": 0.758
+        },
+        {
+          "word": "I",
+          "start": 36.073,
+          "end": 36.093,
+          "score": 0.997
+        },
+        {
+          "word": "want",
+          "start": 36.153,
+          "end": 36.333,
+          "score": 0.798
+        },
+        {
+          "word": "to",
+          "start": 36.373,
+          "end": 36.473,
+          "score": 0.466
+        },
+        {
+          "word": "spend",
+          "start": 36.493,
+          "end": 36.734,
+          "score": 0.83
+        },
+        {
+          "word": "some",
+          "start": 36.814,
+          "end": 37.054,
+          "score": 0.888
+        },
+        {
+          "word": "time",
+          "start": 37.114,
+          "end": 37.575,
+          "score": 0.972
+        },
+        {
+          "word": "with",
+          "start": 37.615,
+          "end": 37.756,
+          "score": 0.644
+        },
+        {
+          "word": "you",
+          "start": 38.016,
+          "end": 38.577,
+          "score": 0.71
+        }
+      ]
+    },
+    {
+      "start": 60.545,
+      "end": 83.92,
+      "text": " We look for love, no time for tears Wasted water's all that it is And it don't make no flowers grow Good things might come to those who wait But not for those who wait too late We gotta go for all we know Just the two of us We can make it if we try",
+      "words": [
+        {
+          "word": "We",
+          "start": 60.545,
+          "end": 60.825,
+          "score": 0.753
+        },
+        {
+          "word": "look",
+          "start": 60.865,
+          "end": 61.086,
+          "score": 0.92
+        },
+        {
+          "word": "for",
+          "start": 61.146,
+          "end": 61.406,
+          "score": 0.851
+        },
+        {
+          "word": "love,",
+          "start": 61.466,
+          "end": 61.847,
+          "score": 0.634
+        },
+        {
+          "word": "no",
+          "start": 61.927,
+          "end": 62.147,
+          "score": 0.956
+        },
+        {
+          "word": "time",
+          "start": 62.228,
+          "end": 62.488,
+          "score": 0.924
+        },
+        {
+          "word": "for",
+          "start": 62.528,
+          "end": 62.688,
+          "score": 0.637
+        },
+        {
+          "word": "tears",
+          "start": 62.708,
+          "end": 63.369,
+          "score": 0.475
+        },
+        {
+          "word": "Wasted",
+          "start": 63.529,
+          "end": 63.97,
+          "score": 0.759
+        },
+        {
+          "word": "water's",
+          "start": 64.331,
+          "end": 64.751,
+          "score": 0.366
+        },
+        {
+          "word": "all",
+          "start": 64.892,
+          "end": 65.052,
+          "score": 0.51
+        },
+        {
+          "word": "that",
+          "start": 65.092,
+          "end": 65.252,
+          "score": 0.709
+        },
+        {
+          "word": "it",
+          "start": 65.312,
+          "end": 65.472,
+          "score": 0.346
+        },
+        {
+          "word": "is",
+          "start": 65.492,
+          "end": 65.733,
+          "score": 0.892
+        },
+        {
+          "word": "And",
+          "start": 65.913,
+          "end": 65.973,
+          "score": 0.684
+        },
+        {
+          "word": "it",
+          "start": 66.073,
+          "end": 66.133,
+          "score": 0.604
+        },
+        {
+          "word": "don't",
+          "start": 66.173,
+          "end": 66.434,
+          "score": 0.815
+        },
+        {
+          "word": "make",
+          "start": 66.474,
+          "end": 66.674,
+          "score": 0.527
+        },
+        {
+          "word": "no",
+          "start": 66.774,
+          "end": 66.995,
+          "score": 0.871
+        },
+        {
+          "word": "flowers",
+          "start": 67.415,
+          "end": 67.896,
+          "score": 0.302
+        },
+        {
+          "word": "grow",
+          "start": 67.916,
+          "end": 70.72,
+          "score": 0.571
+        },
+        {
+          "word": "Good",
+          "start": 70.74,
+          "end": 70.82,
+          "score": 0.238
+        },
+        {
+          "word": "things",
+          "start": 70.86,
+          "end": 71.121,
+          "score": 0.834
+        },
+        {
+          "word": "might",
+          "start": 71.201,
+          "end": 71.441,
+          "score": 0.855
+        },
+        {
+          "word": "come",
+          "start": 71.642,
+          "end": 71.942,
+          "score": 0.882
+        },
+        {
+          "word": "to",
+          "start": 72.002,
+          "end": 72.102,
+          "score": 0.738
+        },
+        {
+          "word": "those",
+          "start": 72.142,
+          "end": 72.423,
+          "score": 0.808
+        },
+        {
+          "word": "who",
+          "start": 72.483,
+          "end": 72.643,
+          "score": 0.444
+        },
+        {
+          "word": "wait",
+          "start": 72.743,
+          "end": 73.184,
+          "score": 0.591
+        },
+        {
+          "word": "But",
+          "start": 73.444,
+          "end": 73.504,
+          "score": 0.001
+        },
+        {
+          "word": "not",
+          "start": 73.524,
+          "end": 73.725,
+          "score": 0.948
+        },
+        {
+          "word": "for",
+          "start": 74.105,
+          "end": 74.165,
+          "score": 0.008
+        },
+        {
+          "word": "those",
+          "start": 74.185,
+          "end": 74.386,
+          "score": 0.478
+        },
+        {
+          "word": "who",
+          "start": 74.466,
+          "end": 74.686,
+          "score": 0.77
+        },
+        {
+          "word": "wait",
+          "start": 74.766,
+          "end": 74.987,
+          "score": 0.535
+        },
+        {
+          "word": "too",
+          "start": 75.067,
+          "end": 75.367,
+          "score": 0.686
+        },
+        {
+          "word": "late",
+          "start": 75.487,
+          "end": 75.688,
+          "score": 0.449
+        },
+        {
+          "word": "We",
+          "start": 76.008,
+          "end": 76.188,
+          "score": 0.876
+        },
+        {
+          "word": "gotta",
+          "start": 76.208,
+          "end": 76.469,
+          "score": 0.698
+        },
+        {
+          "word": "go",
+          "start": 76.509,
+          "end": 76.91,
+          "score": 0.837
+        },
+        {
+          "word": "for",
+          "start": 76.93,
+          "end": 77.15,
+          "score": 0.852
+        },
+        {
+          "word": "all",
+          "start": 77.43,
+          "end": 77.571,
+          "score": 0.474
+        },
+        {
+          "word": "we",
+          "start": 77.631,
+          "end": 77.831,
+          "score": 0.832
+        },
+        {
+          "word": "know",
+          "start": 78.712,
+          "end": 78.913,
+          "score": 0.47
+        },
+        {
+          "word": "Just",
+          "start": 79.433,
+          "end": 80.014,
+          "score": 0.681
+        },
+        {
+          "word": "the",
+          "start": 80.094,
+          "end": 80.295,
+          "score": 0.661
+        },
+        {
+          "word": "two",
+          "start": 80.395,
+          "end": 80.775,
+          "score": 0.829
+        },
+        {
+          "word": "of",
+          "start": 80.795,
+          "end": 81.056,
+          "score": 0.709
+        },
+        {
+          "word": "us",
+          "start": 81.777,
+          "end": 81.917,
+          "score": 0.669
+        },
+        {
+          "word": "We",
+          "start": 82.278,
+          "end": 82.498,
+          "score": 0.869
+        },
+        {
+          "word": "can",
+          "start": 82.578,
+          "end": 82.838,
+          "score": 0.856
+        },
+        {
+          "word": "make",
+          "start": 82.898,
+          "end": 83.319,
+          "score": 0.364
+        },
+        {
+          "word": "it",
+          "start": 83.339,
+          "end": 83.379,
+          "score": 0.382
+        },
+        {
+          "word": "if",
+          "start": 83.459,
+          "end": 83.62,
+          "score": 0.756
+        },
+        {
+          "word": "we",
+          "start": 83.7,
+          "end": 83.84,
+          "score": 0.621
+        },
+        {
+          "word": "try",
+          "start": 83.86,
+          "end": 83.92,
+          "score": 0.016
+        }
+      ]
+    },
+    {
+      "start": 142.338,
+      "end": 167.502,
+      "text": " Darling, when the morning comes and I see the morning sun I want to be the one with you Just the two of us We can make it if we try Just the two of us Just the two of us Just the two of us Building big towers way on high Just the two of us",
+      "words": [
+        {
+          "word": "Darling,",
+          "start": 142.338,
+          "end": 142.859,
+          "score": 0.744
+        },
+        {
+          "word": "when",
+          "start": 143.019,
+          "end": 143.28,
+          "score": 0.802
+        },
+        {
+          "word": "the",
+          "start": 143.36,
+          "end": 143.46,
+          "score": 0.891
+        },
+        {
+          "word": "morning",
+          "start": 143.5,
+          "end": 144.021,
+          "score": 0.876
+        },
+        {
+          "word": "comes",
+          "start": 144.121,
+          "end": 144.502,
+          "score": 0.845
+        },
+        {
+          "word": "and",
+          "start": 144.963,
+          "end": 145.063,
+          "score": 0.79
+        },
+        {
+          "word": "I",
+          "start": 145.183,
+          "end": 145.303,
+          "score": 0.803
+        },
+        {
+          "word": "see",
+          "start": 145.463,
+          "end": 145.884,
+          "score": 0.529
+        },
+        {
+          "word": "the",
+          "start": 145.904,
+          "end": 145.984,
+          "score": 0.262
+        },
+        {
+          "word": "morning",
+          "start": 146.004,
+          "end": 146.565,
+          "score": 0.593
+        },
+        {
+          "word": "sun",
+          "start": 147.006,
+          "end": 147.066,
+          "score": 0.225
+        },
+        {
+          "word": "I",
+          "start": 147.507,
+          "end": 147.627,
+          "score": 0.63
+        },
+        {
+          "word": "want",
+          "start": 147.647,
+          "end": 147.727,
+          "score": 0.166
+        },
+        {
+          "word": "to",
+          "start": 147.747,
+          "end": 147.848,
+          "score": 0.619
+        },
+        {
+          "word": "be",
+          "start": 147.908,
+          "end": 148.308,
+          "score": 0.882
+        },
+        {
+          "word": "the",
+          "start": 148.369,
+          "end": 148.489,
+          "score": 0.876
+        },
+        {
+          "word": "one",
+          "start": 148.789,
+          "end": 148.95,
+          "score": 0.686
+        },
+        {
+          "word": "with",
+          "start": 149.01,
+          "end": 149.39,
+          "score": 0.574
+        },
+        {
+          "word": "you",
+          "start": 149.41,
+          "end": 149.47,
+          "score": 0.33
+        },
+        {
+          "word": "Just",
+          "start": 150.873,
+          "end": 151.534,
+          "score": 0.406
+        },
+        {
+          "word": "the",
+          "start": 151.554,
+          "end": 151.714,
+          "score": 0.39
+        },
+        {
+          "word": "two",
+          "start": 151.795,
+          "end": 153.558,
+          "score": 0.79
+        },
+        {
+          "word": "of",
+          "start": 153.578,
+          "end": 153.618,
+          "score": 0.007
+        },
+        {
+          "word": "us",
+          "start": 153.638,
+          "end": 153.678,
+          "score": 0.005
+        },
+        {
+          "word": "We",
+          "start": 153.698,
+          "end": 153.938,
+          "score": 0.706
+        },
+        {
+          "word": "can",
+          "start": 154.079,
+          "end": 154.239,
+          "score": 0.561
+        },
+        {
+          "word": "make",
+          "start": 154.419,
+          "end": 154.66,
+          "score": 0.203
+        },
+        {
+          "word": "it",
+          "start": 154.68,
+          "end": 154.8,
+          "score": 0.676
+        },
+        {
+          "word": "if",
+          "start": 154.88,
+          "end": 155.02,
+          "score": 0.723
+        },
+        {
+          "word": "we",
+          "start": 155.1,
+          "end": 155.321,
+          "score": 0.727
+        },
+        {
+          "word": "try",
+          "start": 156.042,
+          "end": 156.102,
+          "score": 0.304
+        },
+        {
+          "word": "Just",
+          "start": 156.282,
+          "end": 156.463,
+          "score": 0.329
+        },
+        {
+          "word": "the",
+          "start": 156.543,
+          "end": 156.743,
+          "score": 0.711
+        },
+        {
+          "word": "two",
+          "start": 158.727,
+          "end": 158.787,
+          "score": 0.0
+        },
+        {
+          "word": "of",
+          "start": 158.807,
+          "end": 158.847,
+          "score": 0.01
+        },
+        {
+          "word": "us",
+          "start": 158.867,
+          "end": 158.907,
+          "score": 0.318
+        },
+        {
+          "word": "Just",
+          "start": 160.911,
+          "end": 161.451,
+          "score": 0.439
+        },
+        {
+          "word": "the",
+          "start": 161.552,
+          "end": 161.732,
+          "score": 0.485
+        },
+        {
+          "word": "two",
+          "start": 161.852,
+          "end": 162.413,
+          "score": 0.244
+        },
+        {
+          "word": "of",
+          "start": 162.433,
+          "end": 162.473,
+          "score": 0.004
+        },
+        {
+          "word": "us",
+          "start": 162.493,
+          "end": 162.533,
+          "score": 0.358
+        },
+        {
+          "word": "Just",
+          "start": 163.235,
+          "end": 163.315,
+          "score": 0.0
+        },
+        {
+          "word": "the",
+          "start": 163.335,
+          "end": 163.395,
+          "score": 0.0
+        },
+        {
+          "word": "two",
+          "start": 163.415,
+          "end": 163.575,
+          "score": 0.535
+        },
+        {
+          "word": "of",
+          "start": 163.595,
+          "end": 163.635,
+          "score": 0.002
+        },
+        {
+          "word": "us",
+          "start": 163.655,
+          "end": 163.695,
+          "score": 0.322
+        },
+        {
+          "word": "Building",
+          "start": 163.796,
+          "end": 163.976,
+          "score": 0.192
+        },
+        {
+          "word": "big",
+          "start": 164.056,
+          "end": 164.256,
+          "score": 0.715
+        },
+        {
+          "word": "towers",
+          "start": 164.457,
+          "end": 164.978,
+          "score": 0.383
+        },
+        {
+          "word": "way",
+          "start": 165.098,
+          "end": 165.218,
+          "score": 0.382
+        },
+        {
+          "word": "on",
+          "start": 165.238,
+          "end": 165.378,
+          "score": 0.497
+        },
+        {
+          "word": "high",
+          "start": 166.3,
+          "end": 166.4,
+          "score": 0.126
+        },
+        {
+          "word": "Just",
+          "start": 166.42,
+          "end": 166.5,
+          "score": 0.154
+        },
+        {
+          "word": "the",
+          "start": 166.56,
+          "end": 166.781,
+          "score": 0.737
+        },
+        {
+          "word": "two",
+          "start": 166.861,
+          "end": 167.302,
+          "score": 0.695
+        },
+        {
+          "word": "of",
+          "start": 167.322,
+          "end": 167.362,
+          "score": 0.486
+        },
+        {
+          "word": "us",
+          "start": 167.462,
+          "end": 167.502,
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "start": 210.26,
+      "end": 214.87,
+      "text": " You can have it all",
+      "words": [
+        {
+          "word": "You",
+          "start": 210.26,
+          "end": 214.548,
+          "score": 0.314
+        },
+        {
+          "word": "can",
+          "start": 214.568,
+          "end": 214.629,
+          "score": 0.006
+        },
+        {
+          "word": "have",
+          "start": 214.649,
+          "end": 214.729,
+          "score": 0.002
+        },
+        {
+          "word": "it",
+          "start": 214.749,
+          "end": 214.79,
+          "score": 0.005
+        },
+        {
+          "word": "all",
+          "start": 214.81,
+          "end": 214.87,
+          "score": 0.306
+        }
+      ]
+    }
+  ],
+  "word_segments": [
+    {
+      "word": "I",
+      "start": 20.686,
+      "end": 21.007,
+      "score": 0.712
+    },
+    {
+      "word": "see",
+      "start": 21.027,
+      "end": 21.327,
+      "score": 0.98
+    },
+    {
+      "word": "the",
+      "start": 21.367,
+      "end": 21.467,
+      "score": 0.928
+    },
+    {
+      "word": "crystal",
+      "start": 21.547,
+      "end": 22.108,
+      "score": 0.793
+    },
+    {
+      "word": "raindrops",
+      "start": 22.169,
+      "end": 22.77,
+      "score": 0.855
+    },
+    {
+      "word": "fall",
+      "start": 22.91,
+      "end": 23.351,
+      "score": 0.843
+    },
+    {
+      "word": "And",
+      "start": 23.631,
+      "end": 23.751,
+      "score": 0.848
+    },
+    {
+      "word": "the",
+      "start": 23.831,
+      "end": 23.932,
+      "score": 0.793
+    },
+    {
+      "word": "beauty",
+      "start": 23.992,
+      "end": 24.633,
+      "score": 0.732
+    },
+    {
+      "word": "of",
+      "start": 24.833,
+      "end": 25.114,
+      "score": 0.834
+    },
+    {
+      "word": "it",
+      "start": 25.194,
+      "end": 25.234,
+      "score": 0.968
+    },
+    {
+      "word": "all",
+      "start": 25.595,
+      "end": 25.815,
+      "score": 0.892
+    },
+    {
+      "word": "Is",
+      "start": 25.835,
+      "end": 25.875,
+      "score": 0.496
+    },
+    {
+      "word": "when",
+      "start": 26.055,
+      "end": 26.256,
+      "score": 0.814
+    },
+    {
+      "word": "the",
+      "start": 26.296,
+      "end": 26.416,
+      "score": 0.907
+    },
+    {
+      "word": "sun",
+      "start": 26.476,
+      "end": 26.897,
+      "score": 0.924
+    },
+    {
+      "word": "comes",
+      "start": 26.977,
+      "end": 27.197,
+      "score": 0.874
+    },
+    {
+      "word": "shining",
+      "start": 27.257,
+      "end": 27.798,
+      "score": 0.712
+    },
+    {
+      "word": "through",
+      "start": 27.899,
+      "end": 28.159,
+      "score": 0.44
+    },
+    {
+      "word": "To",
+      "start": 30.703,
+      "end": 30.804,
+      "score": 0.964
+    },
+    {
+      "word": "make",
+      "start": 30.864,
+      "end": 31.064,
+      "score": 0.808
+    },
+    {
+      "word": "those",
+      "start": 31.144,
+      "end": 31.425,
+      "score": 0.652
+    },
+    {
+      "word": "rainbows",
+      "start": 31.505,
+      "end": 32.226,
+      "score": 0.87
+    },
+    {
+      "word": "in",
+      "start": 32.386,
+      "end": 32.507,
+      "score": 0.942
+    },
+    {
+      "word": "my",
+      "start": 32.587,
+      "end": 32.827,
+      "score": 0.896
+    },
+    {
+      "word": "mind",
+      "start": 32.887,
+      "end": 33.428,
+      "score": 0.916
+    },
+    {
+      "word": "When",
+      "start": 33.548,
+      "end": 33.709,
+      "score": 0.834
+    },
+    {
+      "word": "I",
+      "start": 33.809,
+      "end": 33.929,
+      "score": 0.828
+    },
+    {
+      "word": "think",
+      "start": 33.989,
+      "end": 34.51,
+      "score": 0.702
+    },
+    {
+      "word": "of",
+      "start": 34.53,
+      "end": 34.75,
+      "score": 0.38
+    },
+    {
+      "word": "you",
+      "start": 34.77,
+      "end": 34.831,
+      "score": 0.33
+    },
+    {
+      "word": "sometime",
+      "start": 34.931,
+      "end": 35.832,
+      "score": 0.806
+    },
+    {
+      "word": "And",
+      "start": 35.912,
+      "end": 35.993,
+      "score": 0.758
+    },
+    {
+      "word": "I",
+      "start": 36.073,
+      "end": 36.093,
+      "score": 0.997
+    },
+    {
+      "word": "want",
+      "start": 36.153,
+      "end": 36.333,
+      "score": 0.798
+    },
+    {
+      "word": "to",
+      "start": 36.373,
+      "end": 36.473,
+      "score": 0.466
+    },
+    {
+      "word": "spend",
+      "start": 36.493,
+      "end": 36.734,
+      "score": 0.83
+    },
+    {
+      "word": "some",
+      "start": 36.814,
+      "end": 37.054,
+      "score": 0.888
+    },
+    {
+      "word": "time",
+      "start": 37.114,
+      "end": 37.575,
+      "score": 0.972
+    },
+    {
+      "word": "with",
+      "start": 37.615,
+      "end": 37.756,
+      "score": 0.644
+    },
+    {
+      "word": "you",
+      "start": 38.016,
+      "end": 38.577,
+      "score": 0.71
+    },
+    {
+      "word": "We",
+      "start": 60.545,
+      "end": 60.825,
+      "score": 0.753
+    },
+    {
+      "word": "look",
+      "start": 60.865,
+      "end": 61.086,
+      "score": 0.92
+    },
+    {
+      "word": "for",
+      "start": 61.146,
+      "end": 61.406,
+      "score": 0.851
+    },
+    {
+      "word": "love,",
+      "start": 61.466,
+      "end": 61.847,
+      "score": 0.634
+    },
+    {
+      "word": "no",
+      "start": 61.927,
+      "end": 62.147,
+      "score": 0.956
+    },
+    {
+      "word": "time",
+      "start": 62.228,
+      "end": 62.488,
+      "score": 0.924
+    },
+    {
+      "word": "for",
+      "start": 62.528,
+      "end": 62.688,
+      "score": 0.637
+    },
+    {
+      "word": "tears",
+      "start": 62.708,
+      "end": 63.369,
+      "score": 0.475
+    },
+    {
+      "word": "Wasted",
+      "start": 63.529,
+      "end": 63.97,
+      "score": 0.759
+    },
+    {
+      "word": "water's",
+      "start": 64.331,
+      "end": 64.751,
+      "score": 0.366
+    },
+    {
+      "word": "all",
+      "start": 64.892,
+      "end": 65.052,
+      "score": 0.51
+    },
+    {
+      "word": "that",
+      "start": 65.092,
+      "end": 65.252,
+      "score": 0.709
+    },
+    {
+      "word": "it",
+      "start": 65.312,
+      "end": 65.472,
+      "score": 0.346
+    },
+    {
+      "word": "is",
+      "start": 65.492,
+      "end": 65.733,
+      "score": 0.892
+    },
+    {
+      "word": "And",
+      "start": 65.913,
+      "end": 65.973,
+      "score": 0.684
+    },
+    {
+      "word": "it",
+      "start": 66.073,
+      "end": 66.133,
+      "score": 0.604
+    },
+    {
+      "word": "don't",
+      "start": 66.173,
+      "end": 66.434,
+      "score": 0.815
+    },
+    {
+      "word": "make",
+      "start": 66.474,
+      "end": 66.674,
+      "score": 0.527
+    },
+    {
+      "word": "no",
+      "start": 66.774,
+      "end": 66.995,
+      "score": 0.871
+    },
+    {
+      "word": "flowers",
+      "start": 67.415,
+      "end": 67.896,
+      "score": 0.302
+    },
+    {
+      "word": "grow",
+      "start": 67.916,
+      "end": 70.72,
+      "score": 0.571
+    },
+    {
+      "word": "Good",
+      "start": 70.74,
+      "end": 70.82,
+      "score": 0.238
+    },
+    {
+      "word": "things",
+      "start": 70.86,
+      "end": 71.121,
+      "score": 0.834
+    },
+    {
+      "word": "might",
+      "start": 71.201,
+      "end": 71.441,
+      "score": 0.855
+    },
+    {
+      "word": "come",
+      "start": 71.642,
+      "end": 71.942,
+      "score": 0.882
+    },
+    {
+      "word": "to",
+      "start": 72.002,
+      "end": 72.102,
+      "score": 0.738
+    },
+    {
+      "word": "those",
+      "start": 72.142,
+      "end": 72.423,
+      "score": 0.808
+    },
+    {
+      "word": "who",
+      "start": 72.483,
+      "end": 72.643,
+      "score": 0.444
+    },
+    {
+      "word": "wait",
+      "start": 72.743,
+      "end": 73.184,
+      "score": 0.591
+    },
+    {
+      "word": "But",
+      "start": 73.444,
+      "end": 73.504,
+      "score": 0.001
+    },
+    {
+      "word": "not",
+      "start": 73.524,
+      "end": 73.725,
+      "score": 0.948
+    },
+    {
+      "word": "for",
+      "start": 74.105,
+      "end": 74.165,
+      "score": 0.008
+    },
+    {
+      "word": "those",
+      "start": 74.185,
+      "end": 74.386,
+      "score": 0.478
+    },
+    {
+      "word": "who",
+      "start": 74.466,
+      "end": 74.686,
+      "score": 0.77
+    },
+    {
+      "word": "wait",
+      "start": 74.766,
+      "end": 74.987,
+      "score": 0.535
+    },
+    {
+      "word": "too",
+      "start": 75.067,
+      "end": 75.367,
+      "score": 0.686
+    },
+    {
+      "word": "late",
+      "start": 75.487,
+      "end": 75.688,
+      "score": 0.449
+    },
+    {
+      "word": "We",
+      "start": 76.008,
+      "end": 76.188,
+      "score": 0.876
+    },
+    {
+      "word": "gotta",
+      "start": 76.208,
+      "end": 76.469,
+      "score": 0.698
+    },
+    {
+      "word": "go",
+      "start": 76.509,
+      "end": 76.91,
+      "score": 0.837
+    },
+    {
+      "word": "for",
+      "start": 76.93,
+      "end": 77.15,
+      "score": 0.852
+    },
+    {
+      "word": "all",
+      "start": 77.43,
+      "end": 77.571,
+      "score": 0.474
+    },
+    {
+      "word": "we",
+      "start": 77.631,
+      "end": 77.831,
+      "score": 0.832
+    },
+    {
+      "word": "know",
+      "start": 78.712,
+      "end": 78.913,
+      "score": 0.47
+    },
+    {
+      "word": "Just",
+      "start": 79.433,
+      "end": 80.014,
+      "score": 0.681
+    },
+    {
+      "word": "the",
+      "start": 80.094,
+      "end": 80.295,
+      "score": 0.661
+    },
+    {
+      "word": "two",
+      "start": 80.395,
+      "end": 80.775,
+      "score": 0.829
+    },
+    {
+      "word": "of",
+      "start": 80.795,
+      "end": 81.056,
+      "score": 0.709
+    },
+    {
+      "word": "us",
+      "start": 81.777,
+      "end": 81.917,
+      "score": 0.669
+    },
+    {
+      "word": "We",
+      "start": 82.278,
+      "end": 82.498,
+      "score": 0.869
+    },
+    {
+      "word": "can",
+      "start": 82.578,
+      "end": 82.838,
+      "score": 0.856
+    },
+    {
+      "word": "make",
+      "start": 82.898,
+      "end": 83.319,
+      "score": 0.364
+    },
+    {
+      "word": "it",
+      "start": 83.339,
+      "end": 83.379,
+      "score": 0.382
+    },
+    {
+      "word": "if",
+      "start": 83.459,
+      "end": 83.62,
+      "score": 0.756
+    },
+    {
+      "word": "we",
+      "start": 83.7,
+      "end": 83.84,
+      "score": 0.621
+    },
+    {
+      "word": "try",
+      "start": 83.86,
+      "end": 83.92,
+      "score": 0.016
+    },
+    {
+      "word": "Darling,",
+      "start": 142.338,
+      "end": 142.859,
+      "score": 0.744
+    },
+    {
+      "word": "when",
+      "start": 143.019,
+      "end": 143.28,
+      "score": 0.802
+    },
+    {
+      "word": "the",
+      "start": 143.36,
+      "end": 143.46,
+      "score": 0.891
+    },
+    {
+      "word": "morning",
+      "start": 143.5,
+      "end": 144.021,
+      "score": 0.876
+    },
+    {
+      "word": "comes",
+      "start": 144.121,
+      "end": 144.502,
+      "score": 0.845
+    },
+    {
+      "word": "and",
+      "start": 144.963,
+      "end": 145.063,
+      "score": 0.79
+    },
+    {
+      "word": "I",
+      "start": 145.183,
+      "end": 145.303,
+      "score": 0.803
+    },
+    {
+      "word": "see",
+      "start": 145.463,
+      "end": 145.884,
+      "score": 0.529
+    },
+    {
+      "word": "the",
+      "start": 145.904,
+      "end": 145.984,
+      "score": 0.262
+    },
+    {
+      "word": "morning",
+      "start": 146.004,
+      "end": 146.565,
+      "score": 0.593
+    },
+    {
+      "word": "sun",
+      "start": 147.006,
+      "end": 147.066,
+      "score": 0.225
+    },
+    {
+      "word": "I",
+      "start": 147.507,
+      "end": 147.627,
+      "score": 0.63
+    },
+    {
+      "word": "want",
+      "start": 147.647,
+      "end": 147.727,
+      "score": 0.166
+    },
+    {
+      "word": "to",
+      "start": 147.747,
+      "end": 147.848,
+      "score": 0.619
+    },
+    {
+      "word": "be",
+      "start": 147.908,
+      "end": 148.308,
+      "score": 0.882
+    },
+    {
+      "word": "the",
+      "start": 148.369,
+      "end": 148.489,
+      "score": 0.876
+    },
+    {
+      "word": "one",
+      "start": 148.789,
+      "end": 148.95,
+      "score": 0.686
+    },
+    {
+      "word": "with",
+      "start": 149.01,
+      "end": 149.39,
+      "score": 0.574
+    },
+    {
+      "word": "you",
+      "start": 149.41,
+      "end": 149.47,
+      "score": 0.33
+    },
+    {
+      "word": "Just",
+      "start": 150.873,
+      "end": 151.534,
+      "score": 0.406
+    },
+    {
+      "word": "the",
+      "start": 151.554,
+      "end": 151.714,
+      "score": 0.39
+    },
+    {
+      "word": "two",
+      "start": 151.795,
+      "end": 153.558,
+      "score": 0.79
+    },
+    {
+      "word": "of",
+      "start": 153.578,
+      "end": 153.618,
+      "score": 0.007
+    },
+    {
+      "word": "us",
+      "start": 153.638,
+      "end": 153.678,
+      "score": 0.005
+    },
+    {
+      "word": "We",
+      "start": 153.698,
+      "end": 153.938,
+      "score": 0.706
+    },
+    {
+      "word": "can",
+      "start": 154.079,
+      "end": 154.239,
+      "score": 0.561
+    },
+    {
+      "word": "make",
+      "start": 154.419,
+      "end": 154.66,
+      "score": 0.203
+    },
+    {
+      "word": "it",
+      "start": 154.68,
+      "end": 154.8,
+      "score": 0.676
+    },
+    {
+      "word": "if",
+      "start": 154.88,
+      "end": 155.02,
+      "score": 0.723
+    },
+    {
+      "word": "we",
+      "start": 155.1,
+      "end": 155.321,
+      "score": 0.727
+    },
+    {
+      "word": "try",
+      "start": 156.042,
+      "end": 156.102,
+      "score": 0.304
+    },
+    {
+      "word": "Just",
+      "start": 156.282,
+      "end": 156.463,
+      "score": 0.329
+    },
+    {
+      "word": "the",
+      "start": 156.543,
+      "end": 156.743,
+      "score": 0.711
+    },
+    {
+      "word": "two",
+      "start": 158.727,
+      "end": 158.787,
+      "score": 0.0
+    },
+    {
+      "word": "of",
+      "start": 158.807,
+      "end": 158.847,
+      "score": 0.01
+    },
+    {
+      "word": "us",
+      "start": 158.867,
+      "end": 158.907,
+      "score": 0.318
+    },
+    {
+      "word": "Just",
+      "start": 160.911,
+      "end": 161.451,
+      "score": 0.439
+    },
+    {
+      "word": "the",
+      "start": 161.552,
+      "end": 161.732,
+      "score": 0.485
+    },
+    {
+      "word": "two",
+      "start": 161.852,
+      "end": 162.413,
+      "score": 0.244
+    },
+    {
+      "word": "of",
+      "start": 162.433,
+      "end": 162.473,
+      "score": 0.004
+    },
+    {
+      "word": "us",
+      "start": 162.493,
+      "end": 162.533,
+      "score": 0.358
+    },
+    {
+      "word": "Just",
+      "start": 163.235,
+      "end": 163.315,
+      "score": 0.0
+    },
+    {
+      "word": "the",
+      "start": 163.335,
+      "end": 163.395,
+      "score": 0.0
+    },
+    {
+      "word": "two",
+      "start": 163.415,
+      "end": 163.575,
+      "score": 0.535
+    },
+    {
+      "word": "of",
+      "start": 163.595,
+      "end": 163.635,
+      "score": 0.002
+    },
+    {
+      "word": "us",
+      "start": 163.655,
+      "end": 163.695,
+      "score": 0.322
+    },
+    {
+      "word": "Building",
+      "start": 163.796,
+      "end": 163.976,
+      "score": 0.192
+    },
+    {
+      "word": "big",
+      "start": 164.056,
+      "end": 164.256,
+      "score": 0.715
+    },
+    {
+      "word": "towers",
+      "start": 164.457,
+      "end": 164.978,
+      "score": 0.383
+    },
+    {
+      "word": "way",
+      "start": 165.098,
+      "end": 165.218,
+      "score": 0.382
+    },
+    {
+      "word": "on",
+      "start": 165.238,
+      "end": 165.378,
+      "score": 0.497
+    },
+    {
+      "word": "high",
+      "start": 166.3,
+      "end": 166.4,
+      "score": 0.126
+    },
+    {
+      "word": "Just",
+      "start": 166.42,
+      "end": 166.5,
+      "score": 0.154
+    },
+    {
+      "word": "the",
+      "start": 166.56,
+      "end": 166.781,
+      "score": 0.737
+    },
+    {
+      "word": "two",
+      "start": 166.861,
+      "end": 167.302,
+      "score": 0.695
+    },
+    {
+      "word": "of",
+      "start": 167.322,
+      "end": 167.362,
+      "score": 0.486
+    },
+    {
+      "word": "us",
+      "start": 167.462,
+      "end": 167.502,
+      "score": 0.5
+    },
+    {
+      "word": "You",
+      "start": 210.26,
+      "end": 214.548,
+      "score": 0.314
+    },
+    {
+      "word": "can",
+      "start": 214.568,
+      "end": 214.629,
+      "score": 0.006
+    },
+    {
+      "word": "have",
+      "start": 214.649,
+      "end": 214.729,
+      "score": 0.002
+    },
+    {
+      "word": "it",
+      "start": 214.749,
+      "end": 214.79,
+      "score": 0.005
+    },
+    {
+      "word": "all",
+      "start": 214.81,
+      "end": 214.87,
+      "score": 0.306
+    }
+  ]
+}

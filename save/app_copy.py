@@ -65,6 +65,11 @@ def download_audio(youtube_url, output_dir=DOWNLOAD_DIR):
         "postprocessors": [{"key": "FFmpegExtractAudio", "preferredcodec": "wav"}],
         "noplaylist": True,
         "quiet": True,
+        "http_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/118.0.0.0 Safari/537.36"
+    }
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(youtube_url, download=True)
@@ -388,7 +393,11 @@ def get_audio():
         return jsonify({"error": "Missing 'video' parameter"}), 400
     try:
         vid = extract_video_id(video)
-        ydl_opts = {"quiet": True, "format": "bestaudio/best", "noplaylist": True}
+        ydl_opts = {"quiet": True, "format": "bestaudio/best", "noplaylist": True, "http_headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                      "AppleWebKit/537.36 (KHTML, like Gecko) "
+                      "Chrome/118.0.0.0 Safari/537.36"
+    }}
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(f"https://www.youtube.com/watch?v={vid}", download=False)
             return jsonify({

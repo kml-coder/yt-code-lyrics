@@ -165,7 +165,7 @@ def get_lyrics_from_genius(title, artist=None):
 
         # 🔍 로깅 (원시 텍스트 미리보기)
         print("\n📝 [Raw Genius Lyrics Preview]")
-        for i, line in enumerate(lyrics_text.split("\n")[:20]):
+        for i, line in enumerate(lyrics_text.split("\n")):
             print(f"{i+1:02d}. {line}")
 
         print(f"✅ Parsed {len(lines)} lines from Genius HTML\n")
@@ -362,36 +362,26 @@ def lyrics_timed():
 
         # 2) 가사 소스 결정
         if mode == "manual" and manual_lyrics:
-            genius_lyrics = manual_lyrics
+            lines = [line.strip() for line in manual_lyrics.splitlines() if line.strip()]
+            genius_lyrics = "\n".join(lines).strip()
         elif mode == "url" and genius_url:
             # URL 직접 파싱 (위의 robust 파서 재사용)
             def fetch_genius_by_url(url: str):
                 import requests
                 from bs4 import BeautifulSoup
                 page = requests.get(url, timeout=20)
+                
                 soup = BeautifulSoup(page.text, "html.parser")
-                containers = soup.select("div[class^='Lyrics__Container']")
-                if not containers:
+                lines = soup.select('div[data-testid="lyrics.lyricLine"]')
+                if not lines:
+                    print("No lyrics found")
                     return None
-                lines = []
-                for c in containers:
-                    buf = []
-                    for elem in c.descendants:
-                        if getattr(elem, "name", None) == "br":
-                            if buf:
-                                line = " ".join(buf).strip()
-                                if line:
-                                    lines.append(line)
-                                buf = []
-                        elif getattr(elem, "name", None) is None:
-                            t = str(elem).strip()
-                            if t:
-                                buf.append(t)
-                    if buf:
-                        line = " ".join(buf).strip()
-                        if line:
-                            lines.append(line)
-                return "\n".join(lines).strip()
+                lyrics = []
+                for line in lines:
+                    text  = line.get_text(strip=True)
+                    if text:
+                        lyrics.append(text)
+                return "\n".join(lyrics).strip()
 
             genius_lyrics = fetch_genius_by_url(genius_url)
         else:
@@ -400,7 +390,7 @@ def lyrics_timed():
         # 3) 정제 전/후 로깅
         print("\n📝 [Raw Genius Lyrics Preview]")
         if genius_lyrics:
-            for i, line in enumerate(genius_lyrics.split("\n")[:20]):
+            for i, line in enumerate(genius_lyrics.split("\n")):
                 print(f"{i+1:02d}. {line}")
         else:
             print("(No lyrics retrieved from Genius)")

@@ -2,6 +2,7 @@ const $input = document.getElementById("yt-input");
 const $btnGen = document.getElementById("btn-generate");
 const $btnPlay = document.getElementById("btn-play");
 const $btnPause = document.getElementById("btn-pause");
+const $btnRestart = document.getElementById("btn-restart");
 const $btnDownload = document.getElementById("btn-download");
 const $status = document.getElementById("status");
 const $code = document.getElementById("code");
@@ -128,10 +129,11 @@ function scheduleSync() {
 
     const seg = segments[nextIndex];
     if (t >= seg.start) {
-      // ✅ 가사 길이에 따라 타이핑 속도 조절
-      const baseDelay = 25;
-      const dynamicDelay = Math.min(50, baseDelay + seg.text.length * 0.5);
-      // await typeText(`${seg.text}`, dynamicDelay); 
+      // ✅ 가사 구간 시간(초)에 비례한 타이핑 속도
+      const duration = seg.end - seg.start; 
+      // 길이가 짧으면 빠르고, 길면 느리게 (보정값)
+      const dynamicDelay = Math.max(10, Math.min(100, duration * 10));
+
       await typeText(`[${seg.start.toFixed(2)}s] ${seg.text}`, dynamicDelay);
       displayedIndex++;
     }
@@ -161,6 +163,7 @@ $btnGen.addEventListener("click", async () => {
 
     $btnPlay.disabled = true;
     $btnPause.disabled = true;
+    $btnRestart.disabled = true;
     $btnDownload.disabled = true;
 
     const input = $input.value.trim();
@@ -200,15 +203,27 @@ $btnGen.addEventListener("click", async () => {
 // ---------------------------------------------
 $btnPlay.addEventListener("click", () => {
   if (!$audio.src) return setStatus("No audio loaded.");
-  $audio.currentTime = 0; // ✅ 재시작 시 항상 0초로
   $audio.play();
   scheduleSync();
   setStatus("▶ Playing...");
 });
 
 $btnPause.addEventListener("click", () => {
+  if (!$audio.src) return setStatus("No audio loaded.");
   $audio.pause();
   setStatus("⏸️ Paused.");
+});
+
+$btnRestart.addEventListener("click", () => {
+  if (syncTimer) clearInterval(syncTimer);
+  displayedIndex = -1;
+  typing = false
+  $code.textContent = "";
+
+  $audio.pause();
+  $audio.currentTime = 0; // ✅ 재시작 시 항상 0초로
+  $audio.play();
+  setStatus("⏸️ Restarted.");
 });
 
 // ---------------------------------------------

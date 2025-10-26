@@ -1,11 +1,20 @@
-import subprocess, os
+import demucs.separate
+import shlex
+import os
 
-AUDIO_PATH = "downloads/VoEsEC2CLgE.wav"
-OUTPUT_DIR = "separated"
+def seperate_audio(audio_path: str):
 
-# Demucs 실행 (보컬만 추출)
-subprocess.run([
-    "demucs", "--two-stems=vocals", AUDIO_PATH, "-o", OUTPUT_DIR
-])
+    # 출력 폴더 지정 (자동 생성)
+    output_dir = "separated_tracks"
+    os.makedirs(output_dir, exist_ok=True)
 
-VOCAL_PATH = os.path.join(OUTPUT_DIR, "htdemucs", "song", "vocals.wav")
+    # CLI 명령 구성
+    cmd = f'-n htdemucs --two-stems vocals -o "{output_dir}" "{audio_path}"'
+
+    # 실행 (shlex.split으로 CLI 문자열을 파싱)
+    demucs.separate.main(shlex.split(cmd))
+
+    print(f"✅ 분리 완료! 결과 파일은 '{output_dir}' 안에 저장됩니다.")
+
+if __name__ == "__main__":
+    seperate_audio("downloads/VoEsEC2CLgE.wav")

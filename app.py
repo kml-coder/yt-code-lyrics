@@ -57,7 +57,7 @@ def download_audio(youtube_url, output_dir=DOWNLOAD_DIR):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(youtube_url, download=True)
         file_path = os.path.join(output_dir, f"{info['id']}.wav")
-        return file_path, info.get("title", "Unknown Title"), info.get("uploader", "")
+        return file_path, info.get("title", "Unknown Title"), info.get("uploader", ""), info["id"]
 
 
 def seperate_audio(audio_path: str):
@@ -204,7 +204,7 @@ def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_sta
         lyric_str = " ".join([normalize_word(x) for x in line.split() if normalize_word(x)])
         if not lyric_str:
             print(f"⚪️ [Line {line_idx}] Empty line, skipped.")
-            results.append({"text": line, "start": None, "end": None})
+            results.append({"text": line, "start": None, "end": None, "interpolated": False})
             continue
 
         best_score = 0.0
@@ -238,7 +238,8 @@ def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_sta
                     "text": line,
                     "start": round(start_val, 3),
                     "end": round(end_time, 3),
-                    "score": round(best_score, 3)
+                    "score": round(best_score, 3),
+                    "interpolated": False
                 })
                 print(f"\n✅ [Line {line_idx}] Done | best_score={best_score:.3f} | "
                     f"range={used_idx}-{last_high_idx} | start={start_val:.3f}, end={end_time:.3f}")
@@ -257,7 +258,8 @@ def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_sta
                     "text": line,
                     "start": round(start_t, 3),
                     "end": round(end_t, 3),
-                    "score": round(best_score, 3)
+                    "score": round(best_score, 3),
+                    "interpolated": False
                 })
                 print(f"\n⚙️ [Line {line_idx}] Auto-finish | best_score={best_score:.3f} | "
                       f"range={used_idx}-{last_high_idx} | start={start_t:.3f}, end={end_t:.3f}")
@@ -279,10 +281,12 @@ def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_sta
                 next_start = nexts[0][1]
                 mid = round(statistics.mean([prev_end, next_start]), 3)
                 r["start"], r["end"] = mid, round(mid + 2.5, 3)
+                r["interpolated"] = True
                 print(f"🔧 Interpolated [Line {idx}] '{r['text']}' → {r['start']}~{r['end']}")
             elif prevs:
                 prev_end = prevs[-1][2]
                 r["start"], r["end"] = round(prev_end + 1.0, 3), round(prev_end + 3.5, 3)
+                r["interpolated"] = True
                 print(f"🔧 Interpolated [Line {idx}] (after prev) '{r['text']}' → {r['start']}~{r['end']}")
 
     return results
@@ -385,6 +389,48 @@ def align_lyrics_lines(lyrics_lines, whisper_words, drop_threshold=0.15, min_sta
 def index():
     return render_template("index.html")
 
+@app.route("/edit")
+def edit_page():
+    return render_template("edit.html")
+
+@app.route("/api/alignment", methods=["GET"])
+def get_alignment():
+    video_id = request.args.get("video_id", "").strip()
+    if not video_id:
+        return jsonify({"error": "Missing 'video_id'"}), 400
+
+    path = os.path.join(DOWNLOAD_DIR, f"{video_id}_aligned.json")
+    if not os.path.exists(path):
+        return jsonify({"error": "Alignment not found"}), 404
+
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return jsonify(data)
+
+
+@app.route("/api/alignment", methods=["POST"])
+def save_alignment():
+    payload = request.get_json(silent=True) or {}
+    video_id = payload.get("video_id")
+    lines = payload.get("lines")
+    meta = payload.get("meta", {})
+
+    if not video_id or not isinstance(lines, list):
+        return jsonify({"error": "Invalid payload"}), 400
+
+    path = os.path.join(DOWNLOAD_DIR, f"{video_id}_aligned.json")
+    data = {
+        "video_id": video_id,
+        "meta": meta,
+        "lines": lines
+    }
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    return jsonify({"ok": True})
+
+
 
 @app.route("/api/audio", methods=["GET"])
 def get_audio():
@@ -425,7 +471,7 @@ def lyrics_timed():
 
     try:
         # 1) 다운로드 & 음성 인식
-        audio_path, yt_title, yt_uploader = download_audio(video_url)
+        audio_path, yt_title, yt_uploader, video_id = download_audio(video_url)
         print(f"✅ Downloaded: {yt_title} ({audio_path})")
         seperated_vocal_path = seperate_audio(audio_path)
         whisper_segments = transcribe_with_whisperx(seperated_vocal_path)
@@ -467,9 +513,20 @@ def lyrics_timed():
 
         aligned = align_lyrics_lines(lyrics_lines, whisper_words)
 
+        save_path = os.path.join(DOWNLOAD_DIR, f"{video_id}_aligned.json")
+        with open(save_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "video_id": video_id,
+                "meta": {"title": yt_title, "artist": artist or yt_uploader, "mode": mode},
+                "lines": aligned
+            }, f, indent=2, ensure_ascii=False)
+        print(f"💾 Alignment saved → {save_path}")
+
+
         return jsonify({
             "youtube_title": yt_title,
             "artist": artist or yt_uploader,
+            "video_id": video_id,
             "lyrics_timed": aligned,  # ✅ 단어별 포함
         })
 
@@ -484,4 +541,4 @@ def lyrics_timed():
 # 🚀 실행
 # ----------------------------------------
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=3000, debug=True)
+    app.run(host="0.0.0.0", port=3000, debug=True)

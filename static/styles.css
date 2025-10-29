@@ -175,9 +175,280 @@ body {
   box-shadow: 0 0 6px var(--fg);
 }
 
+
+
+
 @keyframes blink {
   50% {
     opacity: 0;
   }
 }
 
+/* ===========================================================
+   ✏️ Edit Page Theme (edit.html 전용)
+   index.html과 동일한 사이버-터미널 감성 유지
+=========================================================== */
+.edit-page {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 20px;
+  color: var(--fg);
+  background: var(--bg);
+  font-family: "Fira Code", monospace;
+}
+
+/* 상단 바 */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #020a0a;
+  border: 1px solid #073a34;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.topbar .btn {
+  background: #072b2a;
+  color: var(--fg);
+  border: 1px solid #0c4c45;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.topbar .btn:hover {
+  background: #0b4742;
+}
+
+.pill {
+  background: #051010;
+  border: 1px solid #094b42;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* 오디오 플레이어 */
+#editor-audio {
+  width: 100%;
+  margin: 12px 0 16px 0;
+  border-radius: 8px;
+  outline: none;
+  background: #020808;
+}
+
+/* 가사 행 */
+.line-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 110px 110px 90px;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #073a34;
+  padding: 8px 10px;
+  transition: background 0.2s ease;
+}
+
+.line-row:nth-child(odd) {
+  background: #010404;
+}
+
+.line-row:hover {
+  background: #03100e;
+}
+
+.line-row input[type="text"],
+.line-row input[type="number"] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #073a34;
+  background: #020606;
+  color: var(--fg);
+  border-radius: 6px;
+  font-family: "Fira Code", monospace;
+}
+
+.line-row input[type="number"] {
+  text-align: center;
+}
+
+.line-row input:focus {
+  border-color: var(--fg);
+  outline: none;
+  box-shadow: 0 0 6px var(--fg);
+}
+
+/* Interpolated 표시 */
+.tag {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid #00ffcc80;
+  margin-left: 8px;
+  color: #00ffcc;
+}
+
+.tag.warn {
+  border-color: #ffbb33;
+  color: #ffbb33;
+}
+
+/* Action 버튼 */
+.btn {
+  background: #072b2a;
+  border: 1px solid #0c4c45;
+  color: var(--fg);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #0b4742;
+}
+
+.btn.primary {
+  background: #00ffcc;
+  color: #000;
+  border-color: #00ffcc;
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  background: #1effd5;
+}
+
+/* 푸터 */
+.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  background: #010505;
+  border-top: 1px solid #073a34;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* 헤더 */
+.hdr {
+  background: #030909;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 1px solid #094b42;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* 상태 메시지 */
+#save-status {
+  color: var(--muted);
+  font-size: 14px;
+  margin-left: auto;
+}
+
+/* 스크롤바 (터미널 스타일) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #010505;
+}
+::-webkit-scrollbar-thumb {
+  background: #06483f;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0b7b6b;
+}
+
+/* -------------------------------------------
+   🔎 Google Search Box (Lyrics input 위)
+------------------------------------------- */
+#google-search-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+#google-search-box input {
+  flex: 1;
+  background: #050a0a;
+  border: 1px solid #073a34;
+  color: var(--fg);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  transition: border-color 0.2s ease;
+}
+
+#google-search-box input:focus {
+  outline: none;
+  border-color: var(--fg);
+  box-shadow: 0 0 6px var(--fg);
+}
+
+#google-search-box button {
+  border: none;
+  background: #072b2a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#google-search-box button:hover {
+  background: #0c4c45;
+}
+
+#google-search-box img {
+  width: 18px;
+  vertical-align: middle;
+  filter: brightness(1.3);
+}
+
+
+/* -------------------------------------------
+   🎵 Progress Bar (top of lyrics UI)
+------------------------------------------- */
+.progress-container {
+  margin: 14px 0;
+  padding: 8px 12px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-text {
+  font-size: 13px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00c4cc, #007b7f);
+  transition: width 0.3s ease;
+}

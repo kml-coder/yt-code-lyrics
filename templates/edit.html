@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Lyrics ⟶ Per-line Timing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- ✅ 통합된 styles.css만 불러오기 -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <div class="editor-wrap edit-page">
+    <div class="topbar">
+      <a class="btn" href="/" onclick="localStorage.setItem('return_from_edit', 'true')">← Back</a>
+      <div class="pill" id="meta-title"></div>
+      <div class="pill" id="meta-artist"></div>
+      <div class="pill" id="meta-video"></div>
+      <span id="save-status"></span>
+    </div>
+
+    <audio id="editor-audio" controls></audio>
+
+    <div class="line-row hdr">
+      <div>#</div>
+      <div>Lyric (editable)</div>
+      <div>Start (s)</div>
+      <div>End (s)</div>
+      <div>Action</div>
+    </div>
+    <div id="lines"></div>
+
+    <div class="sticky-footer">
+      <button id="btn-reset" class="btn">Reset</button>
+      <button id="btn-save" class="btn primary">Save</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='edit.js') }}" defer></script>
+</body>
+</html>

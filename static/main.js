@@ -1,9 +1,43 @@
+// ---------------------------------------------
+// 🔍 Google Lyrics Search
+// ---------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const searchButton = document.getElementById("searchButton");
+  const songTitleInput = document.getElementById("songTitle");
+
+
+  function performSearch() {
+    const title = songTitleInput.value.trim();
+    if (title) {
+      const query = encodeURIComponent(title + " lyrics");
+      window.open("https://www.google.com/search?q=" + query, "_blank");
+    } else {
+      alert("Please enter a song title first!");
+    }
+  }
+
+  if (searchButton && songTitleInput) {
+    // 🔘 클릭 시
+    searchButton.addEventListener("click", performSearch);
+
+    // ⌨️ Enter 키 시
+    songTitleInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault(); // 폼 제출 방지
+        performSearch();
+      }
+    });
+  }
+});
+
+
 const $input = document.getElementById("yt-input");
 const $btnGen = document.getElementById("btn-generate");
 const $btnPlay = document.getElementById("btn-play");
 const $btnPause = document.getElementById("btn-pause");
 const $btnRestart = document.getElementById("btn-restart");
 const $btnDownload = document.getElementById("btn-download");
+const $btnEdit = document.getElementById("btn-edit");
 const $status = document.getElementById("status");
 const $code = document.getElementById("code");
 const $audio = document.getElementById("audio-player");
@@ -18,9 +52,7 @@ let syncTimer = null;
 // ---------------------------------------------
 function getLyricsSource() {
   const mode = document.querySelector('input[name="lyrics-mode"]:checked').value;
-  if (mode === "url") {
-    return { mode, genius_url: document.getElementById("genius-url").value.trim() };
-  } else if (mode === "manual") {
+  if (mode === "manual") {
     return { mode, manual_lyrics: document.getElementById("manual-lyrics").value.trim() };
   }
   return { mode };
@@ -165,6 +197,7 @@ $btnGen.addEventListener("click", async () => {
     $btnPause.disabled = true;
     $btnRestart.disabled = true;
     $btnDownload.disabled = true;
+    $btnEdit.disabled = true; // ✅ 초기엔 비활성화
 
     const input = $input.value.trim();
     if (!input) {
@@ -187,6 +220,21 @@ $btnGen.addEventListener("click", async () => {
     $btnPlay.disabled = false;
     $btnPause.disabled = false;
     $btnDownload.disabled = false;
+
+    if (lyricsData.video_id) {
+      $btnEdit.disabled = false;
+      $btnEdit.onclick = () => {
+        window.location.href = `/edit?video_id=${encodeURIComponent(lyricsData.video_id)}`;
+      };
+    }
+    // ✅ Save session state
+    localStorage.setItem("lyrics_session", JSON.stringify({
+      video_url: input,
+      youtube_title: lyricsData.youtube_title,
+      artist: lyricsData.artist || "unknown",
+      lyrics_timed: segments
+    }));
+
 
     setStatus("✅ Ready to play!");
   } catch (e) {
@@ -244,3 +292,35 @@ $btnDownload.addEventListener("click", () => {
 
   setStatus("📄 Lyrics downloaded!");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1️⃣ 일반 세션 복원
+  const saved = localStorage.getItem("lyrics_session");
+  if (saved) {
+    const data = JSON.parse(saved);
+    $input.value = data.video_url;
+    appendLine(`## Restored: ${data.youtube_title}\n`);
+    setStatus("Session restored from last edit.");
+    segments = data.lyrics_timed;
+    $btnPlay.disabled = false;
+    $btnPause.disabled = false;
+    $btnDownload.disabled = false;
+  }
+
+  // 2️⃣ edit 후 돌아왔을 때
+  if (localStorage.getItem("return_from_edit") === "true") {
+    localStorage.removeItem("return_from_edit");
+    const edited = localStorage.getItem("edited_alignment");
+    if (edited) {
+      const data = JSON.parse(edited);
+      segments = data.lines;
+      appendLine(`## Restored edited version: ${data.meta.title}`);
+      setStatus("✅ Applied latest edit");
+      $btnPlay.disabled = false;
+      $btnPause.disabled = false;
+      $btnDownload.disabled = false;
+      localStorage.removeItem("edited_alignment");
+    }
+  }
+});
+

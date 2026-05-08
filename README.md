@@ -103,7 +103,7 @@ Then open `http://localhost:3000`.
 
 For model selection details and benchmark results, see:
 
-- `docs/model_strategy.md`
+- Detailed document: [`model_strategy.md`](docs/model_strategy.md)
 
 ## Project Structure
 

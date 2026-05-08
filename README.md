@@ -111,7 +111,7 @@ To keep quality high while controlling runtime/model size, multiple model combin
 
 ### Tradeoff Visualization
 
-![model tradeoff](./benchmark_outputs/section5_tradeoff_scatter.png)
+![model tradeoff](./docs/images/output.png)
 
 ## Project Structure
 

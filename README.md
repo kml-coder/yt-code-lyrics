@@ -99,19 +99,11 @@ Then open `http://localhost:3000`.
 - `GET /api/alignment`: Load saved alignment JSON by `video_id`
 - `POST /api/alignment`: Save edited alignment JSON
 
-## Model Strategy and Benchmarking
+## Model Strategy
 
-To keep quality high while controlling runtime/model size, multiple model combinations were benchmarked instead of locking into a single default blindly.
+For model selection details and benchmark results, see:
 
-- Notebook: `notebooks/model_combo_benchmark.ipynb`
-- Outputs: `benchmark_outputs/`
-- Ranking: `benchmark_outputs/section4_ranked.csv`
-- Recommendation: `benchmark_outputs/section6_recommendation.md`
-- Strategy doc: `docs/model_strategy.md`
-
-### Tradeoff Visualization
-
-![model tradeoff](./docs/images/output.png)
+- `docs/model_strategy.md`
 
 ## Project Structure
 

@@ -7,6 +7,7 @@ app = 'yt-code-lyrics'
 primary_region = 'sin'
 
 [build]
+  dockerfile = "Dockerfile"
 
 [http_service]
   internal_port = 3000

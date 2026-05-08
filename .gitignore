@@ -1,2 +1,25 @@
 venv/
 downloads/
+
+# macOS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Runtime artifacts
+demucs_wav/
+cache/
+
+# Benchmark artifacts
+benchmark_outputs/
+
+# Local scratch / backups
+save/
+lyrics_timed(20).json
+output.png
+
+# Local media files in repo root
+/*.wav
+/*.mp3

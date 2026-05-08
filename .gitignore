@@ -18,7 +18,6 @@ benchmark_outputs/
 # Local scratch / backups
 save/
 lyrics_timed(20).json
-output.png
 
 # Local media files in repo root
 /*.wav

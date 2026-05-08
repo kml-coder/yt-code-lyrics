@@ -22,7 +22,7 @@ For music-heavy videos like *Mine All Mine*, YouTube captions are often unavaila
 
 Examples where captions are not available:
 
-![YouTube subtitle disabled cases](./docs/images/no_sub.png)
+![YouTube subtitle disabled cases](./docs/images/sub_no.png)
 
 ### 2) Captions appear too fast ("machine-gun" style)
 
